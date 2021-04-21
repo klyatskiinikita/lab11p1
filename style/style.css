@@ -1,0 +1,66 @@
+@keyframes red-light{
+    0%{background-color: red;}
+    50%{background-color: gray;}
+}
+
+@keyframes yellow-light{
+    30%{background-color: yellow;}
+    50%{background-color: gray;}
+}
+
+@keyframes green-light{
+    50%{background-color: green;}
+    72%{background-color: gray;}
+    78%{background-color: green;}
+    82%{background-color: gray;}
+    86%{background-color: green;}
+    90%{background-color: gray;}
+    94%{background-color: green;}
+    98%{background-color: gray;}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.traffic-light-body {
+    background-color: black;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.light {
+    height: 200px;
+    width: 200px;
+    background-color: gray;
+    margin: 20px auto;
+    padding: 30px;
+    font-size: 100px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.light.-red {
+    animation: red-light 20s steps(1, end) 1s infinite normal;
+}
+
+.light.-yellow {
+    animation: yellow-light 20s steps(1, end) 1s infinite normal;
+}
+
+.light.-green {
+    animation: green-light 20s steps(1, end) 1s infinite normal;
+}
